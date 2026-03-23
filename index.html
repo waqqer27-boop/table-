@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      align-items: center;
+    }
+
+    button {
+      background: #000;
+      color: white;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 12px 0;
+      width: 100%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+
+    button:hover::before {
+      left: 100%;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      border-color: #888;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>mollyboi</h1>
+
+  <div class="container">
+    <div class="links">
+      <button onclick="window.location.href='https://www.instagram.com/moiiyboi/'">Instagram</button>
+      <button onclick="window.location.href='https://www.youtube.com/@molIyboi'">YouTube</button>
+      <button onclick="window.location.href='https://www.twitch.tv/moiiyboi'">Twitch</button>
+      <button onclick="window.location.href='https://www.donationalerts.com/r/mollyboi'">Donate</button>
+    </div>
+  </div>
+
+</body>
+</html>
